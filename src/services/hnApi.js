@@ -5,7 +5,7 @@ export const newsStoriesUrl = `${baseUrl}newstories.json`;
 export const storyUrl = `${baseUrl}item/`;
 
 export const getStoryIds = async () => {
-  const result = await axios.get(newsStoriesUrl).then(({ data }) => data);
+  const result = await axios.get(newsStoriesUrl);
 
-  return result;
+  return result.data;
 };
